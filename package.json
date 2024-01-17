@@ -1,0 +1,23 @@
+{
+  "name": "xingyun_blog",
+  "version": "1.0.0",
+  "author": "xingyun",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.9.10",
+    "vuepress": "1.9.7",
+    "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-theme-reco": "1.6.17"
+  },
+  "description": "单纯的个人项目文档",
+  "dependencies": {
+    "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
+    "@vuepress-reco/vuepress-plugin-loading-page": "^1.6.13",
+    "@vuepress-reco/vuepress-plugin-pagation": "^1.6.17",
+    "vuepress-plugin-code-copy": "^1.0.6"
+  }
+}
