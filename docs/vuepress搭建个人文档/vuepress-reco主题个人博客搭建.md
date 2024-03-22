@@ -97,7 +97,7 @@ theme-cli init
 
 ```
 如图所示：
-![在这里插入图片描述](/docs_img/3694347aeee34888b497fc58a8fd98a8.png)
+![在这里插入图片描述](/docs_img/vuepress-reco主题个人博客搭建/3694347aeee34888b497fc58a8fd98a8.png)
 
 
 
@@ -116,11 +116,11 @@ npm run dev
 ```
 访问命令行输出的IP地址，一般为http://localhost:8080/，即可访问博客了
 
-![在这里插入图片描述](/docs_img/a4ba69c033a540e894e6551a52afd328.png)
+![在这里插入图片描述](/docs_img/vuepress-reco主题个人博客搭建/a4ba69c033a540e894e6551a52afd328.png)
 
 初始界面如图所示：
 
-![在这里插入图片描述](/docs_img/6323c849d51841058c88112f4fe63c0f.png)
+![在这里插入图片描述](/docs_img/vuepress-reco主题个人博客搭建/6323c849d51841058c88112f4fe63c0f.png)
 
 之后则是通过修改配置文件来定制自己的博客。
 
@@ -228,6 +228,14 @@ module.exports = {
       lang: 'zh-CN',
     }
   },
+
+//禁用webpack的最小化优化。(我在生成静态文件时，如果不禁用会导致并不能生成正常的静态文件,或许是我的版本不兼容问题？)
+  chainWebpack: config => {
+    if (process.env.NODE_ENV === "production") {
+      config.optimization.minimize(false);
+    }
+  },
+
   head: head,
   plugins: plugins,   //  插件
 
@@ -280,24 +288,6 @@ module.exports = {
         avatar: "/img/星石传说.jpg",
         link: 'https://blog.csdn.net/2301_78630677?type=blog'
       },
-      {
-        title: '知乎',
-        desc: '分享学习生活中的一些小工具',
-        avatar: "/img/知乎.jpg",
-        link: 'https://www.zhihu.com/people/70-92-86-58'
-      },
-      {
-        title: 'ZCOOL',
-        desc: '新的一年,希望能学习一下设计美化',
-        avatar: "/img/花草有情.png",
-        link: 'https://www.zcool.com.cn/u/26917827'
-      },
-      {
-        title: 'B站',
-        desc: '作为之前博客的集大成者,以视频方式总结学习',
-        avatar: "/img/B.jpg",
-        link: 'https://space.bilibili.com/3546391280355473'
-      },
     ],
 
   },
@@ -310,7 +300,7 @@ module.exports = {
 
 > 如下图所示
 
-![在这里插入图片描述](/docs_img/25838e706c5f4d17a6d3b88491b278c0.png)
+![在这里插入图片描述](/docs_img/vuepress-reco主题个人博客搭建/25838e706c5f4d17a6d3b88491b278c0.png)
 
 在侧边栏的配置中，其中config文件夹中的sidebar,js如下：
 
@@ -386,12 +376,12 @@ module.exports = [
         {
         "text": "GitHub",
         "link": "https://github.com/xingyun-dev",
-        // "icon": "reco-github"  // 图标
+        "icon": "reco-github"  // 图标
         },
         {
         "text": 'Gitee', 
         "link": 'https://gitee.com/wht050106', 
-        // "icon": ''
+        "icon": 'reco-mayun'
         },
 
     ]

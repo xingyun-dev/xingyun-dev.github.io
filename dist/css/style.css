@@ -10,6 +10,10 @@
 font-size:30px
 }
 
+.hero h1{
+    color:aqua;
+}
+
 /* 首页标签列表样式 */
 .abstract-item {
   background-color: #d3faea3d !important;  

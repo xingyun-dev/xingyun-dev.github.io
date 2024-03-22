@@ -35,12 +35,12 @@ module.exports = [
         {
         "text": "GitHub",
         "link": "https://github.com/xingyun-dev",
-        // "icon": "reco-github"  // 图标
+        "icon": "reco-github"  // 图标
         },
         {
         "text": 'Gitee', 
         "link": 'https://gitee.com/wht050106', 
-        // "icon": ''
+        "icon": 'reco-mayun'
         },
 
     ]

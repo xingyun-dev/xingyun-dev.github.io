@@ -8,13 +8,24 @@ module.exports = {
   description: "作为个人的项目文档",
   dest: "./dist",
   port: "8080",
-  base: '/vuepress-blog/',
+
+  // base: '/',      // 默认是'/'
   //设置为中文
   locales: {
     '/':{
       lang: 'zh-CN',
     }
   },
+
+  //禁用webpack的最小化优化。(我在生成静态文件时，如果不禁用会导致并不能生成正常的静态文件,或许是我的版本不兼容问题？)
+  chainWebpack: config => {
+    if (process.env.NODE_ENV === "production") {
+      config.optimization.minimize(false);
+    }
+  },
+
+
+
   head: head,
   plugins: plugins,   //  插件
 
@@ -67,24 +78,7 @@ module.exports = {
         avatar: "/img/星石传说.jpg",
         link: 'https://blog.csdn.net/2301_78630677?type=blog'
       },
-      {
-        title: '知乎',
-        desc: '分享学习生活中的一些小工具',
-        avatar: "/img/知乎.jpg",
-        link: 'https://www.zhihu.com/people/70-92-86-58'
-      },
-      {
-        title: 'ZCOOL',
-        desc: '新的一年,希望能学习一下设计美化',
-        avatar: "/img/花草有情.png",
-        link: 'https://www.zcool.com.cn/u/26917827'
-      },
-      {
-        title: 'B站',
-        desc: '作为之前博客的集大成者,以视频方式总结学习',
-        avatar: "/img/B.jpg",
-        link: 'https://space.bilibili.com/3546391280355473'
-      },
+      
     ],
 
   },

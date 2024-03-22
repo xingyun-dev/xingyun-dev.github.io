@@ -6,7 +6,7 @@ set -e
 # 生成静态文件
 npm run build
 
-cd ./public
+cd ./dist
 
 git init
 
@@ -16,9 +16,8 @@ git commit -m '--deploy'
 
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:xingyun/learn-typescript.git master:gh-pages
 # git push -f git@gitee.com:wht050106/vuepress-blog.git master:gh-pages
-git push -f  https://gitee.com/wht050106/vuepress-blog.git master:gh-pages
+git push -f  git@github.com:xingyun-dev/xingyun-dev.github.io.git master
 
 cd -
 

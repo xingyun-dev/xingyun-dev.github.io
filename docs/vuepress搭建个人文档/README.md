@@ -14,7 +14,6 @@ isShowComments: true
 这是我的第一篇项目文档,记录了使用vuepress-reco主题来搭建个人文档。
 :::
 
-<!--more-->
-
+<!-- more -->
 
 

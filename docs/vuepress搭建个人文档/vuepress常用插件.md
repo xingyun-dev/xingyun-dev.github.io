@@ -158,7 +158,7 @@ npm install -D vuepress-plugin-copyright
 Valine 是一款基于 LeanCloud 的快速、简洁且高效的无后端评论系统，Vssue 是 Vue 驱动的、基于 Issue 的评论插件。
 
 使用 Valine 需要先获取 AppId 和 AppKey。访问 LeanCloud 网站，进行注册登陆。登陆后进入到控制台页面，创建一个新应用，创建成功后，进入创建的应用中，在 设置->应用凭证 选项卡中，就可以看到 AppId 和 AppKey 了。
-![在这里插入图片描述](/docs_img/529226d916124315b847e9a8c94b0b3e.png)
+![在这里插入图片描述](/docs_img/vuepress-reco主题个人博客搭建/529226d916124315b847e9a8c94b0b3e.png)
 
 ```bash
 #install
